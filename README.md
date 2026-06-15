@@ -1,41 +1,80 @@
-# AI Stack Planner
+# 🤖 AI Stack Planner
 
-**India-first AI stack recommendation platform** for students, researchers, founders, PMs, analysts, designers, marketers, developers, and consultants.
+> Personalized AI stack recommendation platform that turns your goals, budget, and workflow needs into curated AI tool bundles for Indian users.
+
+[![React](https://img.shields.io/badge/React-18-blue?logo=react&logoColor=white)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-5-646CFF?logo=vite&logoColor=white)](https://vitejs.dev)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-222?logo=githubpages&logoColor=white)](https://pages.github.com)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+
+**[🚀 Live Demo](https://your-username.github.io/ai-stack-planner/)** &nbsp;·&nbsp; **[📦 GitHub Repo](https://github.com/your-username/ai-stack-planner)**
+
+---
+
+<!-- Replace with actual screenshot / GIF -->
+![AI Stack Planner demo](assets/demo.gif)
+
+---
+
+## Key metrics
+
+| | |
+|---|---|
+| **25+** AI tools reviewed | **6** bundle archetypes |
+| **₹0** minimum viable stack | **3** decision layers |
+
+---
 
 ## What it does
-- Takes a user role, use case, budget, and priority
-- Recommends the best AI stack bundles
-- Shows **Best Output**, **Cheapest**, **Fastest**, **Privacy First**, and **Best for Builders** options
-- Surfaces tradeoffs, compatibility notes, and official source links
-- Uses rupee pricing and India-specific payment friction notes
 
-## Tech
-- Vanilla HTML / CSS / JavaScript
-- Static site
-- GitHub Pages ready
-- No backend, no login, no database
+AI Stack Planner helps users pick the right AI tools without wasting time or money.
 
-## Repo structure
+Input:
+- role
+- use case
+- budget
+- priority
+- optional needs like image generation, workflow automation, long context, privacy, and integrations
+
+Output:
+- recommended AI stacks
+- cheapest / fastest / best-output / privacy-first options
+- tradeoffs, pros, cons, and compatibility notes
+- official links for every tool
+
+The app is designed for Indian users, with prices shown in ₹ and practical notes around payment friction, context limits, and bundle compatibility.
+
+---
+
+## Key findings
+
+- **Use-case fit matters more than tool popularity** — the best stack is often a bundle, not a single “best model”.
+- **Token burn / context limits can change the recommendation** — Claude, Gemini, and GPT behave very differently for long-document workflows.
+- **Tool overlap creates regret** — the app avoids recommending redundant tools that solve the same job.
+- **Indian payment friction is real** — pricing and payment support are surfaced upfront so users can choose stacks they can actually buy.
+
+---
+
+## Architecture
+
 ```text
-ai-stack-planner/
-├── index.html
-├── styles.css
-├── script.js
-├── data.js
-├── README.md
-└── .nojekyll
-```
-
-## How to deploy on GitHub Pages
-1. Create a GitHub repo named `ai-stack-planner`
-2. Upload these files to the repo root
-3. Go to **Settings → Pages**
-4. Set **Deploy from branch**
-5. Choose branch `main` and folder `/ (root)`
-6. Save
-7. Open the generated GitHub Pages URL
-
-## Resume bullets
-- Built an India-first AI stack recommendation platform that matches user goals, budget, and workflow needs with personalized LLM and tool bundles.
-- Designed a weighted decision engine evaluating 25+ AI tools across use-case fit, cost, token efficiency, long-context support, integrations, and privacy constraints.
-- Developed a static SaaS-style web app with expandable bundle cards, compatibility notes, and tradeoff analysis to support informed AI tool purchasing decisions.
+User role + use case + budget + priorities
+                │
+                ▼
+       Intent parsing layer
+   (role, budget, feature flags)
+                │
+                ▼
+      Tool scoring engine
+(use case fit, budget fit, priority fit,
+ token risk, India payment friction)
+                │
+                ▼
+      Bundle assembly engine
+(best, budget, speed, privacy, power)
+                │
+                ▼
+  Tradeoff + compatibility narrative
+                │
+                ▼
+     Results UI + comparison table
