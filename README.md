@@ -7,7 +7,7 @@
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-222?logo=githubpages&logoColor=white)](https://pages.github.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-**[🚀 Live Demo](https://your-username.github.io/ai-stack-planner/)** &nbsp;·&nbsp; **[📦 GitHub Repo](https://github.com/your-username/ai-stack-planner)**
+**[🚀 Live Demo](https://OM-DHOMNE.github.io/ai-stack-planner/)** &nbsp;·&nbsp; 
 
 ---
 
